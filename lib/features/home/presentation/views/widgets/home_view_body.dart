@@ -8,7 +8,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [CustomAppBar(),CustomListViewItem()],
+      children: const [CustomAppBar(), CustomListViewItem()],
     );
   }
 }
