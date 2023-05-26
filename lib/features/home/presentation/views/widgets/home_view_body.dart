@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../../../../core/utils/style.dart';
 import 'custom_app_bar.dart';
+import 'custom_list_view.dart';
 import 'custom_list_view_item.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -7,30 +9,18 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        CustomAppBar(),
-        FeaturedListView()
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          CustomAppBar(),
+          FeaturedListView(),
+          SizedBox(height: 30,),
+          Text('Best Seller',style: Styles.titleMedium,)
+        ],
+      ),
     );
   }
 }
 
-class FeaturedListView extends StatelessWidget {
-  const FeaturedListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .25,
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) {
-            return const Padding(
-              padding: EdgeInsets.symmetric(horizontal:  8.0),
-              child: CustomListViewItem(),
-            );
-          }),
-    );
-  }
-}
