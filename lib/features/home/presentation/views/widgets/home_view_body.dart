@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/style.dart';
-import 'best_seller_list_view.dart';
-import 'best_seller_listview.dart';
+import 'best_seller_listView.dart';
 import 'custom_app_bar.dart';
 import 'custom_list_view.dart';
 
@@ -39,10 +38,9 @@ class HomeViewBody extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.0),
             child: BestSellerListView(),
-          ), 
+          ),
         )
       ],
     );
   }
 }
-
