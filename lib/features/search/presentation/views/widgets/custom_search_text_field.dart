@@ -6,7 +6,7 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 55,
+      height: 50,
       child: TextField(
         decoration: InputDecoration(
             enabledBorder: buildOutlineInputBorder(),
@@ -18,7 +18,7 @@ class CustomSearchTextField extends StatelessWidget {
                 opacity: .7,
                 child: Icon(
                   Icons.search,
-                  size: 26,
+                  size: 22,
                 ),
               ),
             )),
