@@ -1,3 +1,4 @@
+import 'package:e_bookly/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/style.dart';
 import 'custom_book_details_appbar.dart';
@@ -27,7 +28,13 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           const Opacity(
               opacity: .7,
-              child: Text("Elsayed Book", style: Styles.textStyle18))
+              child: Text("Elsayed Book", style: Styles.textStyle18)),
+          const SizedBox(
+            height: 6,
+          ),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          )
         ],
       ),
     );
