@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../core/utils/style.dart';
 import 'custom_book_details_appbar.dart';
 import 'CustomBookImage.dart';
 
@@ -16,7 +17,17 @@ class BookDetailsViewBody extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * .13),
             child: const CustomBookImage(),
-          )
+          ),
+          const SizedBox(
+            height: 43,
+          ),
+          const Text("The Jungle Book", style: Styles.textStyle30),
+          const SizedBox(
+            height: 6,
+          ),
+          const Opacity(
+              opacity: .7,
+              child: Text("Elsayed Book", style: Styles.textStyle18))
         ],
       ),
     );
