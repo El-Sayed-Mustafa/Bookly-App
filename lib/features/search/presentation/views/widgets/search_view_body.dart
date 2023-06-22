@@ -50,6 +50,5 @@ class SearchResultListView extends StatelessWidget {
         );
       },
     );
-    ;
   }
 }
