@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:e_bookly/features/home/data/models/book_models/book_models.dart';
 
 import 'package:e_bookly/core/errors/failure.dart';
@@ -22,13 +23,31 @@ class HomeRepoImp implements HomeRepo {
       }
       return right(books);
     } catch (e) {
-      return left(ServerFailure());
+      // ignore: deprecated_member_use
+      if (e is DioError) {
+        return left(ServerFailure.fromDioError(e));
+      }
+      return left(ServerFailure(e.toString()));
     }
   }
 
   @override
-  Future<Either<Failure, List<BookModels>>> fetchFeaturedBooks() {
-    // TODO: implement fetchFeaturedBooks
-    throw UnimplementedError();
+  Future<Either<Failure, List<BookModels>>> fetchFeaturedBooks() async {
+    try {
+      var data = await apiService.get(
+          endPoint: 'volumes?Filtering=free-ebooks&q=subject:programming');
+
+      List<BookModels> books = [];
+      for (var item in data['items']) {
+        books.add(BookModels.fromJson(item));
+      }
+      return right(books);
+    } catch (e) {
+      // ignore: deprecated_member_use
+      if (e is DioError) {
+        return left(ServerFailure.fromDioError(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
   }
 }
