@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/style.dart';
 import 'box_action.dart';
 import 'custom_book_details_appbar.dart';
-import 'CustomBookImage.dart';
+import 'custom_book_image.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -23,7 +23,10 @@ class BookDetailsViewBody extends StatelessWidget {
                 const CustomBookDetailsAppBar(),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: width * .17),
-                  child: const CustomBookImage(),
+                  child: const CustomBookImage(
+                    imageUrl:
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpqXPPIuVinWdNTw8u8O8If0E3C8hhtq1_G0OGR6un7fcQULWV7Zv_Q91juxyaK3Y_4H4&usqp=CAU',
+                  ),
                 ),
                 const SizedBox(
                   height: 30,
