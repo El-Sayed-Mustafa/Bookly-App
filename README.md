@@ -1,7 +1,7 @@
+<h1>Bookly</h1>
 
 ![screen](https://github.com/El-Sayed-Mustafa/Bookly-App/assets/110793510/8eaa0276-6267-4abe-92db-930fd0776932)
 
-<h1>Bookly</h1>
 
 <p>
   Welcome to Bookly, a powerful and intuitive book browsing and purchasing app! Bookly is built using Flutter and follows the MVVM (Model-View-ViewModel) architectural pattern with the Bloc (Business Logic Component) pattern, allowing for clean and efficient code organization.
