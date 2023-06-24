@@ -3,7 +3,7 @@ import 'package:e_bookly/features/home/presentation/views/widgets/similer_books_
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/style.dart';
 import '../../../data/models/book_models/book_models.dart';
-import 'box_action.dart';
+import 'books_action.dart';
 import 'custom_book_details_appbar.dart';
 import 'custom_book_image.dart';
 
@@ -60,7 +60,9 @@ class BookDetailsViewBody extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                const BookAction(),
+                BookAction(
+                  bookModels: bookModel,
+                ),
                 const Expanded(
                   child: SizedBox(
                     height: 35,
