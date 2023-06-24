@@ -50,6 +50,7 @@ class HomeRepoImp implements HomeRepo {
       return right(books);
     } catch (e) {
       // ignore: deprecated_member_use
+      // ignore: deprecated_member_use
       if (e is DioError) {
         return left(ServerFailure.fromDioError(e));
       }
